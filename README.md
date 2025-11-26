@@ -31,9 +31,10 @@ There are five directories:
 
 Clone this repository and install dependencies:
 ```bash
-https://github.com/Cyfrin/report-generator-template.git
+https://github.com/0xSimao-audits/report-generator-template.git
 cd report-generator-template
-python3 -m venv venv
+pyenv local 3.11.6
+python3.11 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
