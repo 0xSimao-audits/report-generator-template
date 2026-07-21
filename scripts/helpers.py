@@ -230,7 +230,7 @@ def get_issues(repository, github, filter_options=None):
         summary_tex_content = summary_file.read()
         
     summary_findings_table = ""
-    mitigation_table = f"Name,Status,{get_summary_information()['team_name']},Cyfrin\n"
+    mitigation_table = f"Name,Status,{get_summary_information()['team_name']},0xSimao\n"
     for label in SEVERITY_LABELS:
         # Do nothing if there are no issues with this label
         if get_issue_count(issue_dict, label) == 0:

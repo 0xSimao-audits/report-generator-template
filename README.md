@@ -1,5 +1,5 @@
 # A Markdown based template for writing audit reports
-Forked from [Spearbit](https://github.com/spearbit-audits/report-generator-template).
+Forked from [Cyfrin](https://github.com/Cyfrin/report-generator-template), itself forked from [Spearbit](https://github.com/spearbit-audits/report-generator-template). Credit to both for the original work; neither upstream repository declares a license.
 
 ## Introduction
 
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ### Fetching issues
 
-By default, the script will attempt to fetch issues from the repository given by the `private_github` configuration variable specified in `source/summary_information.conf`. If this is not desired, for now simply comment-out [this line](https://github.com/Cyfrin/report-generator-template/blob/a7345b98278bcd4634049a74d41d5d02f3831f7d/generate_report.py#L8) in `generate_report.py` and replace with your own method for generating `report.md`, either with another tool (such as [`trello_to_audit_report`](https://github.com/Cyfrin/trello_to_audit_report/tree/main)) or creating the file manually.
+The script will attempt to fetch issues from the repository given by the `private_github` configuration variable specified in `source/summary_information.conf`.
 
 ### GitHub Personal Access Token
 
@@ -92,7 +92,7 @@ By default, there are `.gitignore` rules in place to avoid tracking the followin
 
 ### Additional notes
 
-This tool can be used stand-alone but is primarily intended to be used alongside [`audit-repo-cloner`](https://github.com/Cyfrin/audit-repo-cloner), another tool that will take a repository for audit and create a private copy prepared for Cyfrin audit. This repo is installed as a subtree of the cloned audit repo and makes use of GitHub Actions to automatically generate the report.
+This tool can be used stand-alone but is primarily intended to be used alongside [`audit-repo-cloner`](https://github.com/0xSimao-audits/audit-repo-cloner), another tool that will take a repository for audit and create a private copy prepared for 0xSimao audit. This repo is installed as a subtree of the cloned audit repo and makes use of GitHub Actions to automatically generate the report.
 
 If intending to use this tool on its own, be sure to consider the public visibility of this repository and the security implications if the final report will contain sensitive information. If this is the case, it is recommended to create a private copy of this repository as forks are public by default.
 

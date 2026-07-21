@@ -18,7 +18,7 @@ on:
       generator-path:
         required: true
         type: string
-        default: "cyfrin-report/report-generator-template"
+        default: "0xSimao-report/report-generator-template"
       output-path:
         required: true
         type: string
@@ -103,9 +103,9 @@ jobs:
         id: report_name
         run: |
           if [ -z "${{ inputs.time }}" ]; then
-            REPORT_NAME="${{ env.DATE }}-cyfrin-protocol-v0.0"
+            REPORT_NAME="${{ env.DATE }}-0xsimao-protocol-v0.0"
           else
-            REPORT_NAME="${{ inputs.time }}-cyfrin-protocol-v0.0"
+            REPORT_NAME="${{ inputs.time }}-0xsimao-protocol-v0.0"
           fi
           echo "REPORT_NAME=${REPORT_NAME}" >> $GITHUB_ENV
 

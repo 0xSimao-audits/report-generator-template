@@ -18,9 +18,9 @@ def extract_github_owner_repo(repo_url):
     Extract owner and repo name from a GitHub URL or owner/repo string
     
     Examples:
-    - https://github.com/Cyfrin/audit-2025-05-untitled-bank → (Cyfrin, audit-2025-05-untitled-bank)
-    - https://github.com/Cyfrin/audit-2025-05-untitled-bank.git → (Cyfrin, audit-2025-05-untitled-bank)
-    - Cyfrin/audit-2025-05-untitled-bank → (Cyfrin, audit-2025-05-untitled-bank)
+    - https://github.com/0xSimao-audits/audit-2025-05-untitled-bank → (0xSimao-audits, audit-2025-05-untitled-bank)
+    - https://github.com/0xSimao-audits/audit-2025-05-untitled-bank.git → (0xSimao-audits, audit-2025-05-untitled-bank)
+    - 0xSimao-audits/audit-2025-05-untitled-bank → (0xSimao-audits, audit-2025-05-untitled-bank)
     """
     # First check if it's a URL
     url_pattern = r'https?://(?:www\.)?github\.com/([^/]+)/([^/\.]+)(?:\.git)?'
