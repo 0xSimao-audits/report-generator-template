@@ -116,7 +116,11 @@ jobs:
           mv main.pdf ${{ env.REPORT_NAME }}.pdf
           cd $GITHUB_WORKSPACE/${{ inputs.generator-path }}/output
           mv solodit_report.md ${{ env.REPORT_NAME }}.md
-          mv mitigation_table.csv ${{ env.REPORT_NAME }}.csv
+          if [ -f mitigation_table.csv ]; then
+            mv mitigation_table.csv ${{ env.REPORT_NAME }}.csv
+          else
+            echo "mitigation_table.csv not found (issue fetch may have failed); skipping"
+          fi
 
       - name: Upload the report markdown
         uses: actions/upload-artifact@v4
